@@ -1,0 +1,19 @@
+$tlo_nav: rgb(34, 34, 167);
+
+nav {
+    background-color: $tlo_nav;
+    color: white;
+    width: 100vw;
+    height: 8vh;
+    padding: 2vh;
+    font-size: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    & a {
+        margin: 3vh;
+        color: white;
+        text-decoration: none;
+    }
+}

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
+import '../style/index.scss';
 import { Mui_Autocomplete, Mui_Autocomplete_Miasta } from './Autocomplete.js';
-
-
 
 const Form = () => {
     const { register, handleSubmit } = useForm()

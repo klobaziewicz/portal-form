@@ -1,0 +1,58 @@
+h1 {
+    text-align: center;
+    margin: 4vh 0;
+}
+
+label {
+    margin: 0 40vw;
+}
+
+/*
+.MuiFormControl-root {
+    height: 12vh !important;
+    padding: 2vh !important;
+}
+
+.MuiInputBase-root {
+    height: 8vh !important;
+
+    & input {
+        height: 4vh !important;
+    }
+}
+
+.MuiFormLabel-root{
+    margin-top: 15px;
+}
+*/
+
+button{
+    width: 35vw !important;
+    height: 10vh !important;
+    margin: 4vw 32.5vw !important;
+    border-radius: 12px !important;
+}
+
+.text-btm{
+    text-align: center;
+}
+
+.signup_inp {
+    & .MuiFormControl-root {
+        height: 14vh !important;
+        padding: 2vh !important;
+    }
+    
+    & .MuiInputBase-root {
+        height: 11vh !important;
+    
+        & input {
+            height: 4vh !important;
+        }
+    }
+    
+    & .MuiFormLabel-root{
+        margin-top: 1.6vh;
+    }
+
+}
