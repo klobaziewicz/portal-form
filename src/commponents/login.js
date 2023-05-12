@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { Button, TextField } from '@mui/material'
 import '../style/signup.scss';
 
-const Login = () => {
+const Login = (props) => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,7 +17,10 @@ const Login = () => {
                 // Signed in
                 const user = userCredential.user;
                 navigate("/")
-                console.log(user);
+                console.log(user.accessToken);
+                localStorage.setItem("login", user.accessToken);
+                props.parentCallback(user.accessToken);
+                e.preventDefault();
             })
             .catch((error) => {
                 const errorCode = error.code;

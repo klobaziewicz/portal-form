@@ -7,6 +7,19 @@ import SignUp from './commponents/signup';
 import { NavLink, useNavigate } from 'react-router-dom'
 
 function App() {
+  const [login, setLogin] = useState('');
+
+
+  function handleCallback(childData) {
+    setLogin(childData)
+  }
+
+  //console.log(login);
+  console.log(localStorage.getItem("login"));
+  if (login == '') {
+    setLogin(localStorage.getItem("login"))
+  }
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -33,13 +46,17 @@ function App() {
           </NavLink>
         </div>
         <div className='nav_btn'>
-        <NavLink to="/signup">
-          Sign up
-        </NavLink>
+          <NavLink to="/signup">
+            Sign up
+          </NavLink>
         </div>
       </nav>
-      <h1>Dane korespondencyjne</h1>
-      <Form></Form>
+
+      {login != null ? <>
+        <h1>Dane korespondencyjne</h1>
+        <Form></Form>
+      </> : <Login parentCallback={handleCallback} />}
+
     </div>
   );
 }
