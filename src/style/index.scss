@@ -1,0 +1,222 @@
+$fioletowy: rgb(195, 66, 156);
+$tlo: white;
+$czarny: black;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: $tlo;
+    width: 100vw;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    & h1 {
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+}
+
+form {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    & .row,
+    .MuiStack-root,
+    .MuiFormControl-root,
+    .MuiAutocomplete-root {
+        display: block;
+        width: 100vw;
+        height: 15vh;
+        border: none;
+
+        & label {
+            margin-left: calc((100vw - 30vw) / 2);
+            margin-right: calc((100vw - 30vw) / 2);
+            color: black;
+
+            /*
+            display: block;
+            */
+            position: absolute;
+            top: 0.2ex;
+            z-index: 1;
+            left: 0.1em;
+            padding: 0 5px;
+            background-color: white;
+
+        }
+
+        //
+
+
+        @media screen and (max-width: 10002px) {
+
+            & input {
+                border: 1.5px solid black;
+                border-radius: 6px;
+                position: relative;
+                width: 500px;
+                margin: 10px;
+                line-height: 6ex;
+                height: 8vh;
+                padding: 10px;
+                font-size: 24px;
+
+                &:hover {
+                    border: 2.1px solid black;
+                }
+
+            }
+
+            .MuiInputBase-root {
+                height: 11.4vh;
+                width: 600px;
+                margin-left: calc((100vw - 540px) / 2);
+                margin-right: calc((100vw - 580px) / 2);
+                overflow-y: hidden;
+
+                &:hover {
+                    border: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1150px) {
+
+            & input {
+                width: 450px;
+            }
+
+            .MuiInputBase-root {
+                width: 550px;
+                margin-left: calc((100vw - 490px) / 2);
+                margin-right: calc((100vw - 570px) / 2);
+            }
+        }
+
+        @media screen and (max-width: 870px) {
+
+            & input {
+                width: 300px;
+            }
+
+            .MuiInputBase-root {
+                width: 400px;
+                margin-left: calc((100vw - 400px) / 2);
+                margin-right: calc((100vw - 520px) / 2);
+            }
+        }
+
+        //
+
+
+        & Mui_Autocomplete,
+        .MuiInputBase-input {
+            width: 46vw;
+            height: 6vh;
+            margin: 10px 10px 10px 10px;
+            color: black;
+        }
+    }
+
+    & input[type=submit] {
+        display: block;
+        width: 30vw;
+        height: 5vh;
+        margin-top: 1vh;
+        margin-left: calc((100vw - 29vw) / 2);
+        margin-right: calc((100vw - 30vw) / 2);
+        background-color: $fioletowy;
+        color: white;
+        border: 4px solid $fioletowy;
+
+        &:hover {
+            margin-left: calc((100vw - 38vw) / 2);
+            margin-right: calc((100vw - 38vw) / 2);
+            width: 38vw;
+            background-color: white;
+            color: $fioletowy;
+        }
+
+        &:active {
+            margin-left: calc((100vw - 38vw) / 2);
+            margin-right: calc((100vw - 38vw) / 2);
+            width: 38vw;
+            border: 2px solid $fioletowy;
+            background-color: white;
+            font-weight: 700;
+            color: $fioletowy;
+        }
+    }
+
+    & .ostatni {
+        margin-bottom: 6vh;
+    }
+}
+
+/*
+@media screen and (max-width: 10002px) {
+
+    .MuiInputBase-root {
+        width: 500px;
+        height: 11.4vh;
+        margin-left: calc((100vw - 41.6vw) / 2);
+        margin-right: calc((100vw - 40vw) / 2);
+        overflow-y: hidden;
+
+        &:hover {
+            border: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+
+    .MuiInputBase-root {
+        width: 450px;
+        margin-left: calc((100vw - 42.6vw) / 2);
+        margin-right: calc((100vw - 40vw) / 2);
+    }
+}
+
+@media screen and (max-width: 870px) {
+
+    .MuiInputBase-root {
+        width: 300px;
+        margin-left: calc((100vw - 44.6vw) / 2);
+        margin-right: calc((100vw - 40vw) / 2);
+    }
+}*/
+
+.form-group,
+.MuiFormControl-root {
+    position: relative;
+}
+
+.row div {
+
+    color: red;
+}
+
+.MuiOutlinedInput-notchedOutline,
+.MuiButtonBase-root,
+svg,
+path {
+    display: none;
+
+    & :hover {
+        display: none;
+    }
+}
+
+#s9,
+#s10 {
+    margin-top: -25px;
+}
