@@ -18,6 +18,9 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
 
   const onSubmit = async (e) => {
+    $(function () {
+      $("#dialog").css("display", "block")
+    })
     e.preventDefault()
 
     await createUserWithEmailAndPassword(auth, email, email2, password)
@@ -60,7 +63,7 @@ const SignUp = () => {
               $(function () {
                 $("#dialog").css("display", "none");
               })
-            }}>gfhjg</div>
+            }}>Ok</div>
             </div>
             <form>
               <div>
@@ -99,7 +102,8 @@ const SignUp = () => {
                 />*/}
               </div>
 
-              <Button variant="contained" onClick={onSubmit}>Sign up</Button>
+              <Button variant="contained" onClick={onSubmit}
+              >Sign up</Button>
 
             </form>
 
