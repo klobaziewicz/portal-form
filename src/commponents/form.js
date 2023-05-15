@@ -124,7 +124,7 @@ const Form = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className='form1'>
             <div className='row'>
                 {/* imie */}
                 <div className='form-group'>

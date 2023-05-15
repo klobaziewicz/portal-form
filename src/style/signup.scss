@@ -1,12 +1,78 @@
+$fioletowy: rgb(195, 66, 156);
+
+
 h1 {
     text-align: center;
     margin: 4vh 0;
+}
+
+form {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    & .row,
+    .MuiFormControl-root {
+        display: block;
+        width: 100vw;
+        height: 15vh;
+        border: none;
+        padding: 15px 0 !important;
+        overflow: hidden;
+
+        & label {
+            color: black;
+            position: absolute;
+            top: 0.2ex;
+            z-index: 1;
+            left: 0.1em;
+            padding: 0 5px;
+            background-color: white;
+
+        }
+
+        & input {
+            border: 1.5px solid black;
+            border-radius: 6px;
+            position: relative;
+            width: 500px;
+            margin: 10px;
+            line-height: 6ex;
+            height: 8vh;
+            padding: 10px;
+            font-size: 24px;
+
+            &:hover {
+                border: 2.1px solid black;
+            }
+
+        }
+
+        .MuiInputBase-root {
+            height: 11.4vh;
+            width: 100vw;
+            margin: 0;
+            overflow-y: hidden;
+
+            &:hover {
+                border: none;
+            }
+        }
+
+        & .MuiInputBase-input {
+            width: 46vw;
+            height: 6vh;
+            color: black;
+        }
+    }
 }
 
 label {
     margin: 0 40vw;
     z-index: -10;
 }
+
 
 /*
 .MuiFormControl-root {
@@ -39,12 +105,11 @@ button {
 }
 
 .signup_inp {
-    & .MuiFormControl-root {
-        height: 14vh !important;
-        padding: 2vh !important;
-    }
+    width: 100vw;
 
     & .MuiInputBase-root {
+        width: 100vw;
+        margin: 0;
         height: 11vh !important;
 
         & input {
@@ -53,9 +118,25 @@ button {
     }
 
     & .MuiFormLabel-root {
-        margin-top: 1.6vh;
+        margin-top: 3.75vh;
     }
 
+}
+
+
+.inp-row {
+    & .MuiFormControl-root {
+        height: 15vh;
+        padding: 2vh;
+
+        & .MuiInputBase-root {
+
+            & .MuiInputBase-input {
+                width: 40vw;
+                margin: auto;
+            }
+        }
+    }
 }
 
 #dialog {

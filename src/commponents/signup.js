@@ -66,11 +66,11 @@ const SignUp = () => {
             }}>Ok</div>
             </div>
             <form>
-              <div>
+              <div className='inp-row'>
                 <label htmlFor="email-address">
                   Email address
                 </label>
-                <TextField id='email' color="error" className='signup_inp' required onChange={(e) => setEmail(e.target.value)} label="email" variant="outlined" />
+                <TextField id='email' className='signup_inp' required onChange={(e) => setEmail(e.target.value)} label="email" variant="outlined" />
                 {/*<input
                                 type="email"
                                 label="Email address"
@@ -80,14 +80,14 @@ const SignUp = () => {
                                 placeholder="Email address"                                
               />*/}
               </div>
-              <div>
+              <div className='inp-row'>
                 <label htmlFor="email-address2">
                   Repeat email address
                 </label>
                 <TextField className='signup_inp email2' required onChange={(e) => setEmail2(e.target.value)} label="email2" variant="outlined" />
               </div>
 
-              <div>
+              <div className='inp-row'>
                 <label htmlFor="password">
                   Password
                 </label>

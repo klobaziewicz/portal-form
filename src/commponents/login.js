@@ -38,14 +38,14 @@ const Login = (props) => {
                         <h1> FocusApp </h1>
 
                         <form>
-                            <div>
+                            <div className='inp-row'>
                                 <label htmlFor="email-address">
                                     Email address
                                 </label>
                                 <TextField className='signup_inp' id="outlined-basic" required onChange={(e) => setEmail(e.target.value)} label="email" variant="outlined" />
                             </div>
 
-                            <div>
+                            <div className='inp-row'>
                                 <label htmlFor="password">
                                     Password
                                 </label>
