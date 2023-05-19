@@ -1,170 +1,281 @@
 $fioletowy: rgb(195, 66, 156);
 
-
-h1 {
-    text-align: center;
-    margin: 4vh 0;
-}
-
-form {
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-    & .row,
-    .MuiFormControl-root {
-        display: block;
-        width: 100vw;
-        height: 15vh;
+.login {
+    & .MuiOutlinedInput-notchedOutline{
         border: none;
-        padding: 15px 0 !important;
-        overflow: hidden;
-
-        & label {
-            color: black;
-            position: absolute;
-            top: 0.2ex;
-            z-index: 1;
-            left: 0.1em;
-            padding: 0 5px;
-            background-color: white;
-
-        }
-
-        & input {
-            border: 1.5px solid black;
-            border-radius: 6px;
-            position: relative;
-            width: 500px;
-            margin: 10px;
-            line-height: 6ex;
-            height: 8vh;
-            padding: 10px;
-            font-size: 24px;
-
-            &:hover {
-                border: 2.1px solid black;
-            }
-
-        }
-
-        .MuiInputBase-root {
-            height: 11.4vh;
-            width: 100vw;
-            margin: 0;
-            overflow-y: hidden;
-
-            &:hover {
-                border: none;
-            }
-        }
-
-        & .MuiInputBase-input {
-            width: 46vw;
-            height: 6vh;
-            color: black;
-        }
     }
-}
-
-label {
-    margin: 0 40vw;
-    z-index: -10;
-}
-
-
-/*
-.MuiFormControl-root {
-    height: 12vh !important;
-    padding: 2vh !important;
-}
-
-.MuiInputBase-root {
-    height: 8vh !important;
-
-    & input {
-        height: 4vh !important;
+    & h1 {
+        text-align: center;
+        margin: 4vh 0;
     }
-}
 
-.MuiFormLabel-root{
-    margin-top: 15px;
-}
-*/
-
-button {
-    width: 35vw !important;
-    height: 10vh !important;
-    margin: 4vw 32.5vw !important;
-    border-radius: 12px !important;
-}
-
-.text-btm {
-    text-align: center;
-}
-
-.signup_inp {
-    width: 100vw;
-
-    & .MuiInputBase-root {
+    & form {
         width: 100vw;
-        margin: 0;
-        height: 11vh !important;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
 
+        & .row,
+        .MuiFormControl-root {
+            display: block;
+            width: 100vw;
+            height: 15vh;
+            border: none;
+            padding: 15px 0 !important;
+            overflow: hidden;
+
+            & label {
+                color: black;
+                position: absolute;
+                top: 0.2ex;
+                z-index: 1;
+                left: 0.1em;
+                padding: 0 5px;
+                background-color: white;
+
+            }
+
+            & input {
+                border: 1.5px solid black;
+                border-radius: 6px;
+                position: relative;
+                width: 500px;
+                margin: 10px;
+                line-height: 6ex;
+                height: 8vh;
+                padding: 10px;
+                font-size: 24px;
+
+                &:hover {
+                    border: 2.1px solid black;
+                }
+
+            }
+
+            & .MuiInputBase-root {
+                border: none;
+                height: 11.4vh;
+                width: 100vw;
+                margin: 0;
+                overflow-y: hidden;
+
+                &:hover {
+                    border: none;
+                }
+            }
+
+            & .MuiInputBase-input {
+                width: 46vw;
+                height: 6vh;
+                color: black;
+            }
+        }
+    }
+
+    & label {
+        margin: 0 40vw;
+        z-index: -10;
+    }
+
+
+    /*
+    .MuiFormControl-root {
+        height: 12vh !important;
+        padding: 2vh !important;
+    }
+    
+    .MuiInputBase-root {
+        height: 8vh !important;
+    
         & input {
             height: 4vh !important;
         }
     }
+    
+    .MuiFormLabel-root{
+        margin-top: 15px;
+    }
+    */
 
-    & .MuiFormLabel-root {
-        margin-top: 3.75vh;
+    & button {
+        width: 35vw !important;
+        height: 10vh !important;
+        margin: 4vw 32.5vw !important;
+        border-radius: 12px !important;
     }
 
-}
+    & .text-btm {
+        text-align: center;
+    }
 
-
-.inp-row {
-    & .MuiFormControl-root {
-        height: 15vh;
-        padding: 2vh;
+    & .signup_inp {
+        width: 100vw;
 
         & .MuiInputBase-root {
+            width: 100vw;
+            margin: 0;
+            height: 11vh !important;
+            border: none;
 
-            & .MuiInputBase-input {
-                width: 40vw;
-                margin: auto;
+            & input {
+                height: 4vh !important;
+            }
+        }
+
+        & .MuiFormLabel-root {
+            margin-top: 3.75vh;
+        }
+
+    }
+
+
+    & .inp-row {
+        & .MuiFormControl-root {
+            height: 15vh;
+            padding: 2vh;
+
+            & .MuiInputBase-root {
+
+                & .MuiInputBase-input {
+                    width: 40vw;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    & #dialog {
+        height: 15vh;
+        width: 30vw;
+        position: absolute;
+        top: 10vh;
+        border-radius: 10px;
+        left: 35vw;
+        right: 35vw;
+        text-align: center;
+        padding: 4vh;
+        z-index: 90;
+        overflow-y: hidden;
+        display: none;
+        background-color: rgb(213, 233, 241);
+
+        & div {
+            z-index: 99;
+            height: 30px;
+            width: 50px;
+            margin: auto;
+            margin-top: 10px;
+            background-color: rgb(0, 13, 255);
+            color: white;
+            display: block;
+            padding: 2px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.text-fields {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    & div {
+        width: 45vw;
+        margin: 0.3vh auto;
+    }
+    & p{
+        color: red;
+        width: 20vw;
+        font-size: 13px;
+        margin: 0 30vw;
+        visibility: hidden;
+    }
+}
+
+.btn_reg {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &focus {
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:active {
+        box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+        outline: 0;
+    }
+
+    &:not([disabled]):active {
+        box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+        transform: translate(2px, 2px);
+    }
+}
+
+@media (min-width: 768px) {
+    .btn_reg {
+        padding: 12px 50px;
+    }
+}
+
+.chx_fields{
+    width: 70vw;
+    display: flex;
+    margin: 2vh auto;
+    flex-direction: column;
+    & label{
+        margin: 2vh 0;
+    }
+    & .MuiButtonBase-root{
+       
+        svg,
+        path {
+            display: block;
+
+            & :hover {
+                display: block;
             }
         }
     }
 }
 
-#dialog {
-    height: 15vh;
-    width: 30vw;
-    position: absolute;
-    top: 10vh;
-    border-radius: 10px;
-    left: 35vw;
-    right: 35vw;
-    text-align: center;
-    padding: 4vh;
-    z-index: 90;
-    overflow-y: hidden;
-    display: none;
-    background-color: rgb(213, 233, 241);
-
-    & div {
-        z-index: 99;
-        height: 30px;
-        width: 50px;
-        margin: auto;
-        margin-top: 10px;
-        background-color: rgb(0, 13, 255);
-        color: white;
-        display: block;
-        padding: 2px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+.submit_fields{
+    display: flex;
+    flex-direction: column;
+    &:nth-child(n){
+        width: 50vw;
+        margin: 0 auto 2vh auto;
+    } 
 }
